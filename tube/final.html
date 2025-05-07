@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script 
+        src="https://cdn.xtracky.com/scripts/utm-handler.js"
+        data-token="2f66dcf7-ef78-443a-a74f-cea6df64ddde"
+        data-click-id-param="click_id">
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desbloqueio Final - CashTube</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #FF0000;
+      font-size: 26px;
+      margin-top: 30px;
+    }
+    .box {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,0,0,0.3);
+    }
+    .valor {
+      font-size: 24px;
+      color: #00FF88;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    .timer {
+      background: #000;
+      color: #00FF88;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 10px auto;
+      width: 180px;
+    }
+    .botao {
+      display: inline-block;
+      background: #00FF88;
+      color: #111;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .botao:hover {
+      background: #00cc6e;
+    }
+    .beneficios {
+      text-align: left;
+      margin-top: 30px;
+    }
+    .beneficios li {
+      margin: 10px 0;
+    }
+    .prova-social {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 40px;
+      text-align: left;
+    }
+    .prova-social h3 {
+      text-align: center;
+      color: #FF0000;
+    }
+    .comentario {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+    .comentario img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .comentario .texto {
+      font-size: 14px;
+    }
+    .comentario .nome {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+    .notificacao {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #222;
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 14px;
+      box-shadow: 0 0 10px rgba(0,255,100,0.5);
+      display: none;
+      z-index: 9999;
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 20px; }
+      .valor { font-size: 20px; }
+      .timer { font-size: 22px; }
+      .botao { font-size: 16px; padding: 12px 20px; }
+    }
+  </style>
+</head>
+<body>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const nome = localStorage.getItem("usuarioNome") || "Usuário";
+    const pix = localStorage.getItem("usuarioPix") || "Chave não informada";
+
+    // Mostrar no topo (balance bar)
+    const barra = document.getElementById("balanceBar");
+    if (barra) {
+      const info = document.createElement("div");
+      info.innerHTML = `<strong>🙋‍♂️ ${nome}</strong> | 🔑 PIX: <strong>${pix}</strong>`;
+      info.style.fontSize = "14px";
+      info.style.marginTop = "4px";
+      barra.appendChild(info);
+    }
+
+    // Mostrar dentro da página também
+    const localPix = document.getElementById("pixConfirmado");
+    if (localPix) {
+      localPix.innerHTML = `🔐 <strong>${pix}</strong> foi a chave PIX cadastrada com sucesso para receber seu saque!`;
+    }
+  });
+</script>
+
+  <h1>🚨 Último Passo para Sacar R$245,00 Agora</h1>
+  <div class="box">
+    <p>Você já garantiu o saldo. Só falta <strong>desbloquear sua conta</strong> com a taxa única de ativação.</p>
+    <div class="valor">Saldo disponível: R$ 245,00</div>
+    <p><strong>Ativação: apenas R$ 39,90</strong> - liberação imediata do seu saque via Pix.</p>
+
+    <div class="timer" id="contador">09:59</div>
+
+    <a class="botao" href="https://go.perfectpay.com.br/PPU38CPNRK9">
+      🔓 Desbloquear Minha Conta Agora
+    </a>
+
+    <ul class="beneficios">
+      <li>✅ Liberação total da sua conta CashTube</li>
+      <li>⚡ Recebimento via Pix em até 2 minutos</li>
+      <li>🎁 Bônus exclusivo para novos membros</li>
+      <li>📱 Suporte VIP via WhatsApp 24h</li>
+    </ul>
+  </div>
+
+  <div class="prova-social">
+    <h3>💬 Comentários de quem já está ganhando:</h3>
+    <div class="comentario"><img src="https://randomuser.me/api/portraits/women/44.jpg"><div class="texto"><span class="nome">Ana Souza</span> Achei que era golpe kkk mas recebi 225 reais em 5 minutos no Pix 😮</div></div>
+    <div class="comentario"><img src="https://randomuser.me/api/portraits/men/22.jpg"><div class="texto"><span class="nome">Lucas M.</span> Comentei 3 vídeos, fiz R$ 135,50 e já saquei. App real!</div></div>
+    <div class="comentario"><img src="https://randomuser.me/api/portraits/women/31.jpg"><div class="texto"><span class="nome">Carla Lima</span> Muito fácil! Só pagar a taxa e começa a pingar dinheiro 😂</div></div>
+    <div class="comentario"><img src="https://randomuser.me/api/portraits/men/45.jpg"><div class="texto"><span class="nome">Felipe R.</span> Já fiz 995 reais em 2 dias, só comentando vídeo do YouTube 🤯</div></div>
+  </div>
+
+  <div class="notificacao" id="notificacao"></div>
+
+  <script>
+    let tempo = 599;
+    const contador = document.getElementById("contador");
+    setInterval(() => {
+      if (tempo <= 0) return;
+      tempo--;
+      const min = String(Math.floor(tempo / 60)).padStart(2, '0');
+      const sec = String(tempo % 60).padStart(2, '0');
+      contador.innerText = `${min}:${sec}`;
+    }, 1000);
+
+    // Notificações inteligentes flutuantes
+    const notificacao = document.getElementById("notificacao");
+    const mensagens = [
+      "✅ João Pedro acabou de desbloquear e recebeu RR$245 via Pix",
+      "📲 Camila Lima ativou agora e já sacou R$225",
+      "🎉 Rodrigo S. recebeu seu bônus em menos de 2 minutos!",
+      "💸 Marina A. desbloqueou e sacou via Pix rapidinho",
+      "🔥 Marcos D. já recebeu e compartilhou com amigos!"
+    ];
+
+    let indice = 0;
+    setInterval(() => {
+      notificacao.innerText = mensagens[indice];
+      notificacao.style.display = "block";
+      notificacao.style.opacity = "1";
+      setTimeout(() => {
+        notificacao.style.opacity = "0";
+        setTimeout(() => { notificacao.style.display = "none"; }, 1000);
+      }, 5000);
+      indice = (indice + 1) % mensagens.length;
+    }, 10000);
+  </script>
+</body>
+</html>

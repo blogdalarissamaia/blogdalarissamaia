@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script 
+        src="https://cdn.xtracky.com/scripts/utm-handler.js"
+        data-token="2f66dcf7-ef78-443a-a74f-cea6df64ddde"
+        data-click-id-param="click_id">
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CashTube - Cadastro</title>
+
+  <!-- Fonte moderna (Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #111111;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #balanceBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      padding: 10px 5vw;
+      color: #fff;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    #balanceBar div {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 100px auto 40px auto;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 9vw;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .logo span.red { color: #FF0000; }
+    .logo span.white { color: #FFFFFF; }
+
+    .slogan {
+      text-align: center;
+      color: #ccc;
+      margin: 30px 0;
+      font-size: 5vw;
+    }
+
+    form {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.1);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #ddd;
+    }
+
+    form input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1px solid #444;
+      border-radius: 8px;
+      font-size: 16px;
+      background: #222;
+      color: #fff;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    form input:focus {
+      border-color: #FF0000;
+      outline: none;
+      box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    }
+
+    form button {
+      width: 100%;
+      background-color: #FF0000;
+      color: #fff;
+      padding: 16px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: #cc0000;
+    }
+
+    @media (min-width: 600px) {
+      .logo { font-size: 48px; }
+      .slogan { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="balanceBar">
+    <div>💰 Saldo CashTube — R$ <span id="userBalance">0,00</span></div>
+  </div>
+
+  <div class="container">
+    <div class="logo">
+      <span class="red">Cash</span><span class="white">Tube</span>
+    </div>
+
+    <h2 class="slogan">
+      Assista vídeos. Comente. Ganhe dinheiro agora mesmo!<br>Cadastre-se abaixo 👇
+    </h2>
+
+    <form>
+      <label for="nome">Seu Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+      <label for="pix">Chave PIX:</label>
+      <input type="text" id="pix" name="pix" placeholder="Digite sua chave PIX" required>
+
+      <button type="button" onclick="salvarNome()">Cadastrar Agora</button>
+    </form>
+  </div>
+
+  <script>
+    function salvarNome() {
+      const nome = document.getElementById("nome").value.trim();
+      const pix = document.getElementById("pix").value.trim();
+
+      if (nome.length < 2) {
+        alert("Digite um nome válido.");
+        return;
+      }
+      if (pix.length < 5) {
+        alert("Digite uma chave PIX válida.");
+        return;
+      }
+
+      localStorage.setItem("usuarioNome", nome);
+      localStorage.setItem("usuarioPix", pix);
+      window.location.href = "etapa1.html";
+    }
+
+    function addReward(valor) {
+      const saldoSpan = document.getElementById("userBalance");
+      let atual = parseFloat(saldoSpan.innerText.replace(',', '.'));
+      atual += valor;
+      saldoSpan.innerText = atual.toFixed(2).replace('.', ',');
+    }
+  </script>
+
+</body>
+</html>
